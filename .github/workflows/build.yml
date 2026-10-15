@@ -20,11 +20,10 @@ jobs:
           gradle-version: 9.2.0
 
       - name: Compilar
-        working-directory: NOME_DA_PASTA
         run: gradle build --no-daemon
 
       - name: Guardar o .jar
         uses: actions/upload-artifact@v4
         with:
           name: nextuptiers-mod
-          path: NOME_DA_PASTA/build/libs/nextuptiers-*.jar
+          path: build/libs/nextuptiers-*.jar
